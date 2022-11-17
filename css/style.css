@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container {
+    
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-rows: 0.3fr 2.5fr 1fr 1fr 0.7fr;
+    grid-template-areas: 
+    "header menu menu"
+    "hero hero hero"
+    "main main image"
+    "main main extra"
+    "banner banner banner"
+    ;    
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+    
+    
+}
+
+.header {
+    align-items: center;
+    display: grid;
+    background-color: black;
+    grid-area: header;
+}
+
+.menu {
+    align-items: center;
+    display: grid;
+    background-color: red;
+    grid-area: menu;
+
+}
+
+
+.hero {
+    align-items: center;
+    display: grid;
+    background-color: rgba(112,146,191,255);
+    grid-area: hero;
+
+}
+
+.main{
+
+    align-items: center;
+    display: grid;
+    background-color: rgba(136,0,22,255);
+    grid-area: main;
+}
+
+
+.image {
+    align-items: center;
+    display: grid;
+    background-color: rgba(199,191,231,255);
+    grid-area: image;
+
+}
+
+.extra {
+    align-items: center;
+    display: grid;
+    background-color: rgba(35,177,77,255);
+    grid-area: extra;
+
+}
+
+.banner {
+    align-items: center;
+    display: grid;
+    background-color: rgba(255,127,38,255);
+    grid-area: banner;
+
+}
+
+@media (max-width:1024px) {
+
+.container {
+
+    grid-template-columns: 0.6fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1.5fr 2fr 0.7fr 0.7fr;
+    grid-template-areas: 
+    "header header header"
+    "hero hero hero"
+    "menu main main"
+    "menu banner banner"
+    "menu extra image"
+    ;    
+
+
+}
+
+
+}
+
+
+@media (max-width:480px) {
+
+    .container {
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 0.8fr 1.2fr 2fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+        ;    
+    
+    
+    }
+    
+    
+    }
